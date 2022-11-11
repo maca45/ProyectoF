@@ -1,0 +1,19 @@
+
+.p-5 {
+    background-image: url(https://thumbs.dreamstime.com/b/una-botella-de-perfume-chanel-sobre-un-fondo-amarillo-uniforme-con-hermosa-sombra-y-realce-mujer-coco-serie-perfumes-para-mujeres-199195076.jpg);
+}
+.display-5{
+    color: rgb(19, 20, 20);
+    text-shadow: 1px 1px rgb(212, 210, 210);
+    font: small-caps 300%/300% serif;
+}
+.col-md-8{
+    color: rgb(0, 0, 0);
+    font: small-caps 100%/100% serif;
+    
+}
+.btn{
+    background-color: rgb(99, 99, 99);
+    color: aliceblue;
+    
+}

@@ -1,0 +1,23 @@
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    color: white;
+    font-size: 20px;
+  }
+  ::ng-deep  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon {
+    color: rgb(255, 255, 255);
+    margin-right: 0.5rem;
+    font-size: 20px;
+  }
+   ::ng-deep .p-menubar{
+    background-color:#3D8361;
+  }
+  ::ng-deep .p-button.p-button-success, .p-buttonset.p-button-success > .p-button, .p-splitbutton.p-button-success > .p-button {
+    margin-right: 0.5rem;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background: #41b97f;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #41b97f;
+    border-image: initial;
+  }
