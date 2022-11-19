@@ -11,6 +11,14 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { InicioComponent } from './inicio/inicio.component';
 
 import {MenubarModule} from 'primeng/menubar';
+import { AceitesComponent } from './productos/aceites/aceites.component';
+import { MantecaComponent } from './productos/manteca/manteca.component';
+import { ShampooComponent } from './productos/shampoo/shampoo.component';
+import { SalsasComponent } from './productos/salsas/salsas.component';
+import { FrutosSecosComponent } from './productos/frutos-secos/frutos-secos.component';
+import { LecheComponent } from './productos/leche/leche.component';
+import { HarinasComponent } from './productos/harinas/harinas.component';
+import { YerbaComponent } from './productos/yerba/yerba.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +28,15 @@ import {MenubarModule} from 'primeng/menubar';
     ContactoComponent,
     ProductoComponent,
     FooterComponent,
-    InicioComponent
+    InicioComponent,
+    AceitesComponent,
+    MantecaComponent,
+    ShampooComponent,
+    SalsasComponent,
+    FrutosSecosComponent,
+    LecheComponent,
+    HarinasComponent,
+    YerbaComponent
   ],
   imports: [
     BrowserModule,
