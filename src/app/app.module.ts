@@ -21,7 +21,6 @@ import {ButtonModule} from 'primeng/button';
 
 import {MenubarModule} from 'primeng/menubar';
 import {ImageModule} from 'primeng/image';
-import {CarouselModule} from 'primeng/carousel';
 import { UsuariosService } from './servicios/usuarios.service';
 import { environment } from 'src/environments/environment';
 import { PatovaGuard } from './patova.guard';
@@ -45,7 +44,6 @@ import { PatovaGuard } from './patova.guard';
     BrowserAnimationsModule,
     MenubarModule,
     ImageModule,
-    CarouselModule,
     DialogModule,
     ButtonModule,
     ReactiveFormsModule,
