@@ -12,7 +12,6 @@ import { FrutosSecosComponent } from './productos/frutos-secos/frutos-secos.comp
 import { HarinasComponent } from './productos/harinas/harinas.component';
 import { LecheComponent } from './productos/leche/leche.component';
 import { MantecasComponent } from './productos/mantecas/mantecas.component';
-import { SalsasComponent } from './productos/salsas/salsas.component';
 import { ShampooComponent } from './productos/shampoo/shampoo.component';
 import { YerbaComponent } from './productos/yerba/yerba.component';
 
@@ -28,7 +27,6 @@ const routes: Routes = [
   {path:'harinas', component:HarinasComponent},
   {path:'leche', component:LecheComponent},
   {path:'mantecas', component:MantecasComponent},
-  {path:'salsas', component:SalsasComponent},
   {path:'shampoo', component:ShampooComponent},
   {path:'yerba', component:YerbaComponent},
 ];

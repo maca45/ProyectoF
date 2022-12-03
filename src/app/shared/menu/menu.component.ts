@@ -69,10 +69,40 @@ export class MenuComponent implements OnInit {
         routerLink: "/inicio"
 
       },
-
+      
       {
-        label: 'Productos',
-        routerLink: '/producto',
+        label: 'Articulos',
+        icon: 'pi pi-shopping-bag',
+      items:[
+        { 
+          label: "Aceites",
+          routerLink: "aceites"
+        },
+        {
+          label: "Frutos Secos",
+          routerLink: "frutos-secos"
+        },
+        {
+          label: "Harinas",
+          routerLink: "harinas"
+        },
+        {
+          label: "Leche",
+          routerLink: "leche"
+        },
+        {
+          label: "Mantecas",
+          routerLink: "mantecas"
+        },
+        {
+          label: "Yerba",
+          routerLink: "yerba"
+        },
+        {
+          label: "Shampoo",
+          routerLink: "shampoo"
+        }
+      ]
       },
       {
         label: "Contactenos",

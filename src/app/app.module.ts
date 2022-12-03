@@ -31,7 +31,11 @@ import { HarinasComponent } from './productos/harinas/harinas.component';
 import { YerbaComponent } from './productos/yerba/yerba.component';
 import { ShampooComponent } from './productos/shampoo/shampoo.component';
 import { LecheComponent } from './productos/leche/leche.component';
-import { SalsasComponent } from './productos/salsas/salsas.component';
+import { StorageService } from './servicios/storage.service';
+import { CardComponent } from './card/card.component';
+
+//Importacion de componentes utilizados 
+import {CardModule} from 'primeng/card';
 
 
 
@@ -51,7 +55,7 @@ import { SalsasComponent } from './productos/salsas/salsas.component';
     YerbaComponent,
     ShampooComponent,
     LecheComponent,
-    SalsasComponent,
+    CardComponent,
   
   ],
   imports: [
@@ -63,11 +67,12 @@ import { SalsasComponent } from './productos/salsas/salsas.component';
     DialogModule,
     ButtonModule,
     ReactiveFormsModule,
+    CardModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig)
 
   
   ],
-  providers: [UsuariosService, PatovaGuard,],
+  providers: [UsuariosService, PatovaGuard, StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,34 @@
-<p>harinas works!</p>
+<p-dialog header="¡¡¡ADVERTENCIA!!!" [(visible)]="eliminarVisible">
+    <p>¿Deseas eliminar este Producto?</p>
+    <button pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-check" (click)="eliminarProducto()"></button>
+    <button pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-times" (click)="eliminarVisible=false"></button>
+</p-dialog>
+
+<p-dialog header="{{textoBoton}}" [(visible)]="modalVisible">
+    <form [formGroup]="nuevoProducto">
+        <img [src]="imagen" alt="aun no hay imagen" id="previsualizacion">
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="nombre"> 
+            <label for="float-input">Nombre Producto</label>
+        </span>
+        <span class="p-float-label">
+            <input id="float-input" type="number" pInputText formControlName="precio"> 
+            <label for="float-input">Precio</label>
+        </span>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="descripcion">
+            <label for="float-input">Descripción</label>
+        </span>
+        <input id="float-input" type="file" class="p-float-label" pInputText accept=".jpg, .png, .gif" (change)="cargarImagen($event)">
+        <button pButton id="botonAgregarForm" class="p-button-success" label="{{textoBoton}}" (click)="cargarProducto()"></button>
+    </form>
+</p-dialog>
+
+<p-card *ngFor="let producto of harinas" title="Harinas">
+    <img src="{{producto.img}}">
+    <p><strong>Artículo</strong>: {{producto.nombre}}</p>
+    <p><strong>Descripción</strong>: {{producto.descripcion}}</p>
+    <p><strong>Precio</strong>: {{producto.precio}}</p>
+    <button pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-pencil" (click)="mostrarEditar(producto)"></button>
+    <button pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-trash" (click)="mostrarEliminar(producto)"></button>
+</p-card>
