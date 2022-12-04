@@ -47,6 +47,7 @@ import { PatovaGuard } from './patova.guard';
     DialogModule,
     ButtonModule,
     ReactiveFormsModule,
+    ImageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
 
   

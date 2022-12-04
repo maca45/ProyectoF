@@ -1,23 +1,57 @@
-
 <p-menubar [model]="items" style="font-size: 20px;">
-    <button id="boton" type="button" (click)="showModalDialog()" style="margin-top: 15px;" pButton pRipple class="p-button-rounded p-button-success"  label="Iniciar">
+    <button id="boton" type="button" (click)="showModalDialog()" style="margin-top: 15px;" pButton pRipple
+        class="p-button-rounded p-button-success" label="Iniciar">
     </button>
 </p-menubar>
 
+
 <!-- Acá se presenta un formulario para ingresar el usuario y contraseña -->
 <div class="wrapper">
-    <p-dialog header="Iniciar sesion" [(visible)]="modalVisible">
 
+    <p-dialog header="Iniciar Sesion" [(visible)]="modalVisible">
+     
         <form [formGroup]="Usuarios">
-            <!-- Label Nombre Usuario -->
-            <span class="p-float-label">
-                <h2>Usuario</h2>
-                <input type="text" id="float-input" pInputText formControlName="nombre">
-            </span>
-            <!-- Label Contraseña -->
-            <span class="p-float-label">
-                <h2>Contraseña</h2>
-                <input type="password" id="float-input" pInputText formControlName="contrasena">
-            </span>
-            <button id="boton" style="margin-top: 15px; " pButton pRipple type="submit" class="p-button-rounded  p-button-success" (click)="verificarUsuario()" label="Ingresar"></button>
+
+            <div class="form-control">
+
+
+                <input type="value" required="" type="text" id="float-input" pInputText formControlName="nombre">
+                <!-- Label Nombre Usuario -->
+                <label>
+                    <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span
+                        style="transition-delay:100ms">u</span><span style="transition-delay:150ms">a</span><span
+                        style="transition-delay:200ms">r</span><span style="transition-delay:250ms">i</span><span
+                        style="transition-delay:300ms">o</span>
+                </label>
+
+            </div>
+
+
+            <div class="form-control">
+                <input type="value" required="" type="password" id="float-input" pInputText
+                    formControlName="contrasena">
+                <!-- Label Contraseña -->
+
+                <label>
+                    <span style="transition-delay:0ms">C</span><span style="transition-delay:50ms">o</span><span
+                        style="transition-delay:100ms">n</span><span style="transition-delay:150ms">t</span><span
+                        style="transition-delay:200ms">r</span><span style="transition-delay:250ms">a</span><span
+                        style="transition-delay:300ms">s</span><span style="transition-delay:350ms">e</span>
+                    <span style="transition-delay:400ms">ñ</span><span style="transition-delay:450ms">a</span>
+                </label>
+            </div>
+
+
         </form>
+        <button class="button" class="learn-more"  id="boton" style="margin-top: 15px; " pButton pRipple type="submit"
+            class="p-button-rounded  p-button-success" (click)="verificarUsuario()" label="Ingresar" style="left: 10%;">
+        </button>
+      
+
+        
+     
+          
+        
+
+    </p-dialog>
+</div>

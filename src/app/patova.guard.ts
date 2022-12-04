@@ -16,7 +16,6 @@ export class PatovaGuard implements CanActivate {
         return true
       }
       else{
-        this.router.navigateByUrl("Login")
         return false
       }
   }
