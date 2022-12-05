@@ -32,10 +32,15 @@ import { YerbaComponent } from './productos/yerba/yerba.component';
 import { ShampooComponent } from './productos/shampoo/shampoo.component';
 import { LecheComponent } from './productos/leche/leche.component';
 import { StorageService } from './servicios/storage.service';
-import { CardComponent } from './card/card.component';
-
 //Importacion de componentes utilizados 
 import {CardModule} from 'primeng/card';
+import { AceitesService } from './servicios/aceites.service';
+import { FrutosSecosService } from './servicios/frutos-secos.service';
+import { HarinasService } from './servicios/harinas.service';
+import { LecheService } from './servicios/leche.service';
+import { MantecasService } from './servicios/mantecas.service';
+import { ShampooService } from './servicios/shampoo.service';
+import { YerbaService } from './servicios/yerba.service';
 
 
 
@@ -54,9 +59,7 @@ import {CardModule} from 'primeng/card';
     HarinasComponent,
     YerbaComponent,
     ShampooComponent,
-    LecheComponent,
-    CardComponent,
-  
+    LecheComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +75,7 @@ import {CardModule} from 'primeng/card';
 
   
   ],
-  providers: [UsuariosService, PatovaGuard, StorageService],
+  providers: [UsuariosService, PatovaGuard, StorageService, AceitesService, FrutosSecosService, HarinasService, LecheService, MantecasService, ShampooService, YerbaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

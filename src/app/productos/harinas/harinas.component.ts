@@ -3,38 +3,40 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Producto } from 'src/app/model/producto';
 import { HarinasService } from 'src/app/servicios/harinas.service';
+import { StorageService } from 'src/app/servicios/storage.service';
 
-@Component({
+@Component({ 
   selector: 'app-harinas',
   templateUrl: './harinas.component.html',
   styleUrls: ['./harinas.component.css']
 })
 export class HarinasComponent implements OnInit {
 
-  imagen: string | undefined;
+  imagen!: string;
 
   harinas: Producto[] = [];
 
-  nombreImagen!: string;
+  nombreImagen!: string; 
+
+
 
   nuevoProducto = new FormGroup({
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
     descripcion: new FormControl('', Validators.required),
-  })
+  }) 
 
   modalVisible: boolean = false;
 
-  productoSeleccionado!: Producto;
-  servicioStorage: any;
-  servicioProductos: any;
-  coleccionHarinas: import("@angular/fire/compat/firestore").AngularFirestoreCollection<HarinasService> | undefined;
-  textoBoton: any;
+  productoSeleccionado!: Producto; 
+
+  coleccionHarinas!: import("@angular/fire/compat/firestore").AngularFirestoreCollection<HarinasService>;
+  
+  textoBoton!: string;
   eliminarVisible: boolean = false;
 
-  constructor(private db: AngularFirestore) {
-    this.coleccionHarinas= db.collection('aceites');
-  }
+  constructor(private servicioStorage: StorageService, private servicioProductos: HarinasService) {}
+    /*this.coleccionHarinas= db.collection('harinas');*/
 
   ngOnInit(): void {
     this.servicioProductos.getProductos().subscribe((producto: any) => {
@@ -86,7 +88,7 @@ export class HarinasComponent implements OnInit {
       idProducto: this.productoSeleccionado.idProducto,
     }
     this.servicioProductos.editarProducto(this.productoSeleccionado?.idProducto, nuevoProducto)
-      .then((resp: any) => {
+      .then(() => {
         alert("Se actualizo con exito")
       })
       .catch((Error: string) => {
@@ -101,7 +103,7 @@ export class HarinasComponent implements OnInit {
 
   eliminarProducto() {
     this.servicioProductos.deleteProducto(this.productoSeleccionado.idProducto)
-      .then((resp: any) => {
+      .then(() => {
         this.servicioStorage.eliminarImagen(this.productoSeleccionado.img)
         alert("El producto fue eliminado con éxito")
       })

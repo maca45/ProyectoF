@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Producto } from 'src/app/model/producto';
 import { FrutosSecosService } from 'src/app/servicios/frutos-secos.service';
+import { StorageService } from 'src/app/servicios/storage.service';
 
 @Component({
   selector: 'app-frutos-secos',
@@ -11,7 +12,7 @@ import { FrutosSecosService } from 'src/app/servicios/frutos-secos.service';
 })
 export class FrutosSecosComponent implements OnInit {
 
-  imagen: string | undefined;
+  imagen!: string;
 
   frutos_secos: Producto[] = [];
 
@@ -26,15 +27,14 @@ export class FrutosSecosComponent implements OnInit {
   modalVisible: boolean = false;
 
   productoSeleccionado!: Producto;
-  servicioStorage: any;
-  servicioProductos: any;
-  coleccionFrutosSecos: import("@angular/fire/compat/firestore").AngularFirestoreCollection<FrutosSecosService> | undefined;
-  textoBoton: any;
+
+  coleccionFrutosSecos!: import("@angular/fire/compat/firestore").AngularFirestoreCollection<FrutosSecosService>;
+ 
+  textoBoton!: string;
+
   eliminarVisible: boolean = false;
 
-  constructor(private db: AngularFirestore) {
-    this.coleccionFrutosSecos = db.collection('aceites');
-  }
+  constructor(private servicioStorage: StorageService, private servicioProductos: FrutosSecosService) {}
 
   ngOnInit(): void {
     this.servicioProductos.getProductos().subscribe((producto: any) => {
@@ -123,6 +123,7 @@ export class FrutosSecosComponent implements OnInit {
     this.modalVisible = true
   }
 
+/*Agrega y edita el producto */
   cargarProducto() {
     if (this.textoBoton === "Agregar Producto") {
       this.agregarProducto()
@@ -134,6 +135,11 @@ export class FrutosSecosComponent implements OnInit {
     this.modalVisible = false
   }
 
+/**
+ * Toma el archivo de la entrada, lo lee como una URL de datos y luego establece el nombre de la imagen y la URL 
+   de la imagen al nombre del archivo y URL de datos
+ * @param {any} event - any: Este es el evento que se activa cuando el usuario selecciona un archivo.
+ */
   cargarImagen(event: any) {
     let archivo = event.target.files[0];
     let reader = new FileReader();

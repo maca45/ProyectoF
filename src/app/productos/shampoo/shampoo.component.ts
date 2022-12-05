@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Producto } from 'src/app/model/producto';
+import { FrutosSecosService } from 'src/app/servicios/frutos-secos.service';
 import { ShampooService } from 'src/app/servicios/shampoo.service';
+import { StorageService } from 'src/app/servicios/storage.service';
 
 @Component({
   selector: 'app-shampoo',
@@ -11,7 +13,7 @@ import { ShampooService } from 'src/app/servicios/shampoo.service';
 })
 export class ShampooComponent implements OnInit {
 
-  imagen: string | undefined;
+  imagen!: string;
 
   shampoo: Producto[] = [];
 
@@ -26,15 +28,14 @@ export class ShampooComponent implements OnInit {
   modalVisible: boolean = false;
 
   productoSeleccionado!: Producto;
-  servicioStorage: any;
-  servicioProductos: any;
-  coleccionShampoo: import("@angular/fire/compat/firestore").AngularFirestoreCollection<ShampooService> | undefined;
-  textoBoton: any;
+
+  coleccionShampoo!: import("@angular/fire/compat/firestore").AngularFirestoreCollection<ShampooService>;
+  
+  textoBoton!: string;
+  
   eliminarVisible: boolean = false;
 
-  constructor(private db: AngularFirestore) {
-    this.coleccionShampoo= db.collection('aceites');
-  }
+  constructor(private servicioStorage: StorageService, private servicioProductos: FrutosSecosService) {}
 
   ngOnInit(): void {
     this.servicioProductos.getProductos().subscribe((producto: any) => {

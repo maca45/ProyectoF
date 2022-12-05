@@ -13,13 +13,13 @@ export class StorageService {
 
 
   /* Se subira la imagen con la URL obtenida desde el Storage */
-  async subirArchivos(nombre: string, imagen: any) {
+  async subirImagen(nombre: string, imagen: any) {
     try {
       let referenciaImagen = ref(this.storage_productos, 'productos/' + nombre)
       this.respuesta = await uploadString(referenciaImagen, imagen, 'data_url')
         .then(resp => {
           return resp
-        })
+        }) 
       return this.respuesta 
     } 
     catch (error) {

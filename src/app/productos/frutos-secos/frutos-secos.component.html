@@ -1,5 +1,5 @@
 <p-dialog header="¡¡¡ADVERTENCIA!!!" [(visible)]="eliminarVisible">
-    <p>¿Deseas eliminar este Producto?</p>
+    <p>¿Deseas eliminar este Producto?</p> 
     <button pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-check" (click)="eliminarProducto()"></button>
     <button pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-times" (click)="eliminarVisible=false"></button>
 </p-dialog>
@@ -21,7 +21,7 @@
         </span>
         <input id="float-input" type="file" class="p-float-label" pInputText accept=".jpg, .png, .gif" (change)="cargarImagen($event)">
         <button pButton id="botonAgregarForm" class="p-button-success" label="{{textoBoton}}" (click)="cargarProducto()"></button>
-    </form>
+    </form> 
 </p-dialog>
 
 <p-card *ngFor="let producto of frutos_secos" title="Frutos Secos">
@@ -32,3 +32,4 @@
     <button pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-pencil" (click)="mostrarEditar(producto)"></button>
     <button pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-trash" (click)="mostrarEliminar(producto)"></button>
 </p-card>
+

@@ -10,10 +10,10 @@ import { StorageService } from 'src/app/servicios/storage.service';
   selector: 'app-aceites',
   templateUrl: './aceites.component.html',
   styleUrls: ['./aceites.component.css']
-})
+}) 
 export class AceitesComponent implements OnInit {
 
-  imagen: string | undefined;
+  imagen!: string; 
 
   aceites: Producto[] = [];
 
@@ -28,16 +28,14 @@ export class AceitesComponent implements OnInit {
   modalVisible: boolean = false;
 
   productoSeleccionado!: Producto;
-  servicioStorage: any;
-  servicioProductos: any;
-  coleccionHarina: any;
-  coleccionAceites: import("@angular/fire/compat/firestore").AngularFirestoreCollection<AceitesService>;
-  textoBoton: any;
+
+  coleccionAceites!: import("@angular/fire/compat/firestore").AngularFirestoreCollection<AceitesService>;
+
+  textoBoton!: string; 
+
   eliminarVisible: boolean = false;
 
-  constructor(private db: AngularFirestore) {
-    this.coleccionAceites = db.collection('aceites');
-  }
+  constructor(private servicioStorage: StorageService, private servicioProductos: AceitesService) {}
 
   ngOnInit(): void {
     this.servicioProductos.getProductos().subscribe((producto: any) => {

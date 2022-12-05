@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Producto } from 'src/app/model/producto';
+import { FrutosSecosService } from 'src/app/servicios/frutos-secos.service';
 import { LecheService } from 'src/app/servicios/leche.service';
+import { StorageService } from 'src/app/servicios/storage.service';
 
 @Component({
   selector: 'app-leche',
@@ -11,8 +13,7 @@ import { LecheService } from 'src/app/servicios/leche.service';
 })
 export class LecheComponent implements OnInit {
 
-
-  imagen: string | undefined;
+  imagen!: string;
 
   leche: Producto[] = [];
 
@@ -27,15 +28,15 @@ export class LecheComponent implements OnInit {
   modalVisible: boolean = false;
 
   productoSeleccionado!: Producto;
-  servicioStorage: any;
-  servicioProductos: any;
-  coleccionLeche: import("@angular/fire/compat/firestore").AngularFirestoreCollection<LecheService> | undefined;
-  textoBoton: any;
+
+  coleccionLeche!: import("@angular/fire/compat/firestore").AngularFirestoreCollection<LecheService>;
+  
+  textoBoton!: string;
+  
   eliminarVisible: boolean = false;
 
-  constructor(private db: AngularFirestore) {
-    this.coleccionLeche= db.collection('aceites');
-  }
+
+  constructor(private servicioStorage: StorageService, private servicioProductos: FrutosSecosService) {}
 
   ngOnInit(): void {
     this.servicioProductos.getProductos().subscribe((producto: any) => {

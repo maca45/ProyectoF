@@ -1,5 +1,7 @@
+<h3>Estoy en funcionamiento</h3>
+
 <p-dialog header="¡¡¡ADVERTENCIA!!!" [(visible)]="eliminarVisible">
-    <p>¿Deseas eliminar este Producto?</p>
+    <p>¿Deseas eliminar este Producto?</p> 
     <button pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-check" (click)="eliminarProducto()"></button>
     <button pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-times" (click)="eliminarVisible=false"></button>
 </p-dialog>
@@ -24,7 +26,7 @@
     </form>
 </p-dialog>
 
-<p-card *ngFor="let producto of aceites" title="Aceites">
+<p-card *ngFor="let producto of aceites" title=" Aceites ">
     <img src="{{producto.img}}">
     <p><strong>Artículo</strong>: {{producto.nombre}}</p>
     <p><strong>Descripción</strong>: {{producto.descripcion}}</p>
@@ -32,4 +34,3 @@
     <button pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-pencil" (click)="mostrarEditar(producto)"></button>
     <button pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-trash" (click)="mostrarEliminar(producto)"></button>
 </p-card>
-

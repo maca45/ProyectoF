@@ -21,8 +21,8 @@
         </span>
         <input id="float-input" type="file" class="p-float-label" pInputText accept=".jpg, .png, .gif" (change)="cargarImagen($event)">
         <button pButton id="botonAgregarForm" class="p-button-success" label="{{textoBoton}}" (click)="cargarProducto()"></button>
-    </form>
-</p-dialog>
+    </form> 
+</p-dialog> 
 
 <p-card *ngFor="let producto of harinas" title="Harinas">
     <img src="{{producto.img}}">
