@@ -7,6 +7,15 @@ import { InicioComponent } from './inicio/inicio.component';
 import { PatovaGuard } from './patova.guard';
 import { ProductoComponent } from './producto/producto.component';
 
+//Importacion de los productos
+import { AceitesComponent } from './productos/aceites/aceites.component';
+import { FrutosSecosComponent } from './productos/frutos-secos/frutos-secos.component';
+import { HarinasComponent } from './productos/harinas/harinas.component';
+import { LecheComponent } from './productos/leche/leche.component';
+import { MantecasComponent } from './productos/mantecas/mantecas.component';
+import { SalsasComponent } from './productos/salsas/salsas.component';
+import { ShampooComponent } from './productos/shampoo/shampoo.component';
+import { YerbaComponent } from './productos/yerba/yerba.component';
 
 /* Define las rutas de la aplicación. */
 const routes: Routes = [
@@ -14,6 +23,16 @@ const routes: Routes = [
   {path:'contacto', component:ContactoComponent},
   {path:'producto', component:ProductoComponent},
   {path:'admin', component:AdminComponent, canActivate:[PatovaGuard]},
+
+  //Productos
+  {path:'aceites', component:AceitesComponent},
+  {path:'frutos-secos', component:FrutosSecosComponent},
+  {path:'harinas', component:HarinasComponent},
+  {path:'leche', component:LecheComponent},
+  {path:'mantecas', component:MantecasComponent},
+  {path:'salsas', component:SalsasComponent},
+  {path:'shampoo', component:ShampooComponent},
+  {path:'yerba', component:YerbaComponent},
 ];
 
 /* Importar el RouterModule y las rutas. */

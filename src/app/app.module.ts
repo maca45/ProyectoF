@@ -24,6 +24,14 @@ import {ImageModule} from 'primeng/image';
 import { UsuariosService } from './servicios/usuarios.service';
 import { environment } from 'src/environments/environment';
 import { PatovaGuard } from './patova.guard';
+import { AceitesComponent } from './productos/aceites/aceites.component';
+import { FrutosSecosComponent } from './productos/frutos-secos/frutos-secos.component';
+import { MantecasComponent } from './productos/mantecas/mantecas.component';
+import { HarinasComponent } from './productos/harinas/harinas.component';
+import { YerbaComponent } from './productos/yerba/yerba.component';
+import { ShampooComponent } from './productos/shampoo/shampoo.component';
+import { LecheComponent } from './productos/leche/leche.component';
+import { SalsasComponent } from './productos/salsas/salsas.component';
 
 
 
@@ -37,6 +45,14 @@ import { PatovaGuard } from './patova.guard';
     ProductoComponent,
     FooterComponent,
     InicioComponent,
+    AceitesComponent,
+    FrutosSecosComponent,
+    MantecasComponent,
+    HarinasComponent,
+    YerbaComponent,
+    ShampooComponent,
+    LecheComponent,
+    SalsasComponent,
   
   ],
   imports: /* Importar todos los módulos necesarios para que la aplicación funcione. */
