@@ -1,9 +1,12 @@
 //aca se importan  todas las rutas y componentes a utilizar 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+ 
+import{AngularFireAuthModule} from'@angular/fire/compat/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { MenuComponent } from './shared/menu/menu.component';
 
 import { ContactoComponent } from './contacto/contacto.component';
@@ -32,6 +35,7 @@ import { YerbaComponent } from './productos/yerba/yerba.component';
 import { ShampooComponent } from './productos/shampoo/shampoo.component';
 import { LecheComponent } from './productos/leche/leche.component';
 import { SalsasComponent } from './productos/salsas/salsas.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 
@@ -53,6 +57,7 @@ import { SalsasComponent } from './productos/salsas/salsas.component';
     ShampooComponent,
     LecheComponent,
     SalsasComponent,
+    LoginComponent,
   
   ],
   imports: /* Importar todos los módulos necesarios para que la aplicación funcione. */
@@ -66,6 +71,7 @@ import { SalsasComponent } from './productos/salsas/salsas.component';
     ButtonModule,
     ReactiveFormsModule,
     ImageModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
 
   

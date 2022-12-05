@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent }from './admin/admin.component';
+import { LoginComponent } from './auth/login/login.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { PatovaGuard } from './patova.guard';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'inicio', component:InicioComponent},
   {path:'contacto', component:ContactoComponent},
   {path:'producto', component:ProductoComponent},
+  {path: 'login', component:LoginComponent},
   {path:'admin', component:AdminComponent, canActivate:[PatovaGuard]},
 
   //Productos

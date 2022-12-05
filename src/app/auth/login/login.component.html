@@ -1,0 +1,51 @@
+
+<!-- Acá se presenta un formulario para ingresar el usuario y contraseña -->
+<div class="wrapper">
+
+    <p-dialog header="Iniciar Sesion">
+     
+        <form [formGroup]="formularioLogin">
+
+            <div class="form-control">
+
+
+                <input type="value" required="" type="text" id="float-input" pInputText formControlName="username">
+                <!-- Label Nombre Usuario -->
+                <label>
+                    <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span
+                        style="transition-delay:100ms">u</span><span style="transition-delay:150ms">a</span><span
+                        style="transition-delay:200ms">r</span><span style="transition-delay:250ms">i</span><span
+                        style="transition-delay:300ms">o</span>
+                </label>
+
+            </div>
+
+
+            <div class="form-control">
+                <input type="value" required="" type="password" id="float-input" pInputText
+                    formControlName="password">
+                <!-- Label Contraseña -->
+
+                <label>
+                    <span style="transition-delay:0ms">C</span><span style="transition-delay:50ms">o</span><span
+                        style="transition-delay:100ms">n</span><span style="transition-delay:150ms">t</span><span
+                        style="transition-delay:200ms">r</span><span style="transition-delay:250ms">a</span><span
+                        style="transition-delay:300ms">s</span><span style="transition-delay:350ms">e</span>
+                    <span style="transition-delay:400ms">ñ</span><span style="transition-delay:450ms">a</span>
+                </label>
+            </div>
+
+
+        </form>
+        <button class="button" class="learn-more"  id="boton" style="margin-top: 15px; " pButton pRipple type="submit"
+            class="p-button-rounded  p-button-success" label="Ingresar" style="left: 10%;" value="Log In" (click)="iniciarSesion()">
+        </button>
+      
+
+        
+     
+          
+        
+
+    </p-dialog>
+</div>
