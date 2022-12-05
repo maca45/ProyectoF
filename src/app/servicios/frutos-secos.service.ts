@@ -10,7 +10,7 @@ export class FrutosSecosService {
   private coleccionFrutosSecos: AngularFirestoreCollection<Producto>;
 
   constructor(private db: AngularFirestore) {
-    this.coleccionFrutosSecos = db.collection('aceites');
+    this.coleccionFrutosSecos = db.collection('frutos_secos');
   }
 
 

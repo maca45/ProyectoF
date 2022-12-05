@@ -11,7 +11,7 @@ export class LecheService {
   private coleccionLeche: AngularFirestoreCollection<Producto>;
 
   constructor(private db: AngularFirestore) {
-    this.coleccionLeche = db.collection('aceites');
+    this.coleccionLeche = db.collection('leche');
   }
 
 

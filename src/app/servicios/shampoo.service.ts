@@ -11,7 +11,7 @@ export class ShampooService {
   private coleccionShampoo: AngularFirestoreCollection<Producto>;
 
   constructor(private db: AngularFirestore) {
-    this.coleccionShampoo = db.collection('aceites');
+    this.coleccionShampoo = db.collection('shampoo');
   }
 
 

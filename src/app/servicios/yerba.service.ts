@@ -11,7 +11,7 @@ export class YerbaService {
   private coleccionYerba: AngularFirestoreCollection<Producto>;
 
   constructor(private db: AngularFirestore) {
-    this.coleccionYerba = db.collection('aceites');
+    this.coleccionYerba = db.collection('yerba');
   }
 
 

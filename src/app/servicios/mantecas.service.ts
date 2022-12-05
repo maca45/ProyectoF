@@ -11,7 +11,7 @@ export class MantecasService {
   private coleccionManteca: AngularFirestoreCollection<Producto>;
 
   constructor(private db: AngularFirestore) {
-    this.coleccionManteca = db.collection('aceites');
+    this.coleccionManteca = db.collection('manteca');
   }
 
 

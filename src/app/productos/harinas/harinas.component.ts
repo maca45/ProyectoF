@@ -72,7 +72,6 @@ export class HarinasComponent implements OnInit {
             )
           }
         )
-
     }
     else{
     alert("Hay campos vacíos")
@@ -113,6 +112,10 @@ export class HarinasComponent implements OnInit {
     this.eliminarVisible = false
   }
 
+ /**
+  * 
+  * @param {Producto} productoSeleccionado - Producto
+  */
   mostrarEditar(productoSeleccionado: Producto) {
     this.productoSeleccionado = productoSeleccionado
     this.imagen = this.productoSeleccionado.img

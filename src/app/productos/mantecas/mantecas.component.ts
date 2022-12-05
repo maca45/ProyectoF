@@ -19,6 +19,8 @@ export class MantecasComponent implements OnInit {
 
   nombreImagen!: string;
 
+
+  //Creo un nuevo producto
   nuevoProducto = new FormGroup({
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
@@ -44,6 +46,7 @@ export class MantecasComponent implements OnInit {
 
   }
 
+  //agrego un nuevo producto 
   async agregarProducto(){
     if(this.nuevoProducto.valid){
       let nuevoProducto:Producto = {
