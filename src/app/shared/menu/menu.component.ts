@@ -62,79 +62,79 @@ export class MenuComponent implements OnInit {
         if (usuario.nombre === this.Usuarios.value.nombre!) {//si usuario nombre es igual al usuario que esta en la base de datos 
           if (usuario.contrasena === this.Usuarios.value.contrasena!) {//si la contraseña es igual a la contrasena que esta en la base de datos 
             /* Una función que se utiliza para mostrar un mensaje en la pantalla. */
-            const Toast = Swal.mixin({
-              toast: true,
-              position: 'top-end',
-              showConfirmButton: false,
-              timer: 3000,
-              timerProgressBar: true,
-              didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-              }
-            })
-            Toast.fire({
-              icon: 'success',
-              title: 'Inicio Sesion Correctamente'
-            })
+            // const Toast = Swal.mixin({
+            //   toast: true,
+            //   position: 'top-end',
+            //   showConfirmButton: false,
+            //   timer: 3000,
+            //   timerProgressBar: true,
+            //   didOpen: (toast) => {
+            //     toast.addEventListener('mouseenter', Swal.stopTimer)
+            //     toast.addEventListener('mouseleave', Swal.resumeTimer)
+            //   }
+            // })
+            // Toast.fire({
+            //   icon: 'success',
+            //   title: 'Inicio Sesion Correctamente'
+            // })
 
             this.adminVisible = true;
             this.serviciosUsuarios.iniciarSesion()
             this.ngOnInit()
 
           } else {
-            const Toast = Swal.mixin({
-              toast: true,
-              position: 'top-end',
-              showConfirmButton: false,
-              timer: 3000,
-              timerProgressBar: true,
-              didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-              }
-            })
-            Toast.fire({
-              icon: 'error',
-              title: 'La Contraseña es Incorrecta'
+            // const Toast = Swal.mixin({
+            //   toast: true,
+            //   position: 'top-end',
+            //   showConfirmButton: false,
+            //   timer: 3000,
+            //   timerProgressBar: true,
+            //   didOpen: (toast) => {
+            //     toast.addEventListener('mouseenter', Swal.stopTimer)
+            //     toast.addEventListener('mouseleave', Swal.resumeTimer)
+            //   }
+            // })
+            // Toast.fire({
+            //   icon: 'error',
+            //   title: 'La Contraseña es Incorrecta'
 
-            })
+            // })
           }
         }
         else {
-          const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
-          Toast.fire({
-            title: 'Algunos de los Datos son Incorrectos',
-            icon: 'info',
+          // const Toast = Swal.mixin({
+          //   toast: true,
+          //   position: 'top-end',
+          //   showConfirmButton: false,
+          //   timer: 3000,
+          //   timerProgressBar: true,
+          //   didOpen: (toast) => {
+          //     toast.addEventListener('mouseenter', Swal.stopTimer)
+          //     toast.addEventListener('mouseleave', Swal.resumeTimer)
+          //   }
+          // })
+          // Toast.fire({
+          //   title: 'Algunos de los Datos son Incorrectos',
+          //   icon: 'info',
 
-          })
+          // })
         }
       } else {
-        const Toast = Swal.mixin({
-          toast: true,
-          position: 'top-end',
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-          }
-        })
-        Toast.fire({
-          title: 'Los Campos Estan Vacios',
-          icon: 'warning',
-        })
+        // const Toast = Swal.mixin({
+        //   toast: true,
+        //   position: 'top-end',
+        //   showConfirmButton: false,
+        //   timer: 3000,
+        //   timerProgressBar: true,
+        //   didOpen: (toast) => {
+        //     toast.addEventListener('mouseenter', Swal.stopTimer)
+        //     toast.addEventListener('mouseleave', Swal.resumeTimer)
+        //   }
+        // })
+        // Toast.fire({
+        //   title: 'Los Campos Estan Vacios',
+        //   icon: 'warning',
+        // })
 
       }
       this.modalVisible = false;

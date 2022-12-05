@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
-import Swal from 'sweetalert2';
+
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -38,41 +38,11 @@ export class LoginComponent implements OnInit {
       }).catch(error=>{
         alert(error)
       })
-      const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-      Toast.fire({
-        icon: 'error',
-        title: 'La Contraseña es Incorrecta'
-
-      })
+      alert("inicio sesion correctamente")
       
     }
     else{
-      const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-      Toast.fire({
-        icon: 'error',
-        title: 'La Contraseña es Incorrecta'
-
-      })
+      alert("la contraseña es incorrecta")
     }
   }
 
