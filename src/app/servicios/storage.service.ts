@@ -7,12 +7,12 @@ import { getStorage, uploadString, UploadResult, ref, getDownloadURL, deleteObje
 export class StorageService {
 
   constructor() { }
-  private respuesta: UploadResult | undefined
+  private respuesta!: UploadResult;
   storage_productos = getStorage();
   urlImagen: string = "";
 
 
-  /* Se subira la imagen con la URL obtenida desde el Storage */
+  //Carga la imagen al Storage y a retorna 
   async subirImagen(nombre: string, imagen: any) {
     try {
       let referenciaImagen = ref(this.storage_productos, 'productos/' + nombre)

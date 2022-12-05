@@ -11,7 +11,8 @@ import { ProductoComponent } from './producto/producto.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { InicioComponent } from './inicio/inicio.component';
 import {AngularFireModule} from '@angular/fire/compat';
-import { AdminComponent } from './admin/admin.component';
+
+import {CardModule} from 'primeng/card';
 
 //importaciones para el p-dialog
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,45 +22,22 @@ import {ButtonModule} from 'primeng/button';
 
 import {MenubarModule} from 'primeng/menubar';
 import {ImageModule} from 'primeng/image';
-import { UsuariosService } from './servicios/usuarios.service';
 import { environment } from 'src/environments/environment';
 import { PatovaGuard } from './patova.guard';
-import { AceitesComponent } from './productos/aceites/aceites.component';
-import { FrutosSecosComponent } from './productos/frutos-secos/frutos-secos.component';
-import { MantecasComponent } from './productos/mantecas/mantecas.component';
-import { HarinasComponent } from './productos/harinas/harinas.component';
-import { YerbaComponent } from './productos/yerba/yerba.component';
-import { ShampooComponent } from './productos/shampoo/shampoo.component';
-import { LecheComponent } from './productos/leche/leche.component';
-import { StorageService } from './servicios/storage.service';
-//Importacion de componentes utilizados 
-import {CardModule} from 'primeng/card';
-import { AceitesService } from './servicios/aceites.service';
-import { FrutosSecosService } from './servicios/frutos-secos.service';
-import { HarinasService } from './servicios/harinas.service';
-import { LecheService } from './servicios/leche.service';
-import { MantecasService } from './servicios/mantecas.service';
-import { ShampooService } from './servicios/shampoo.service';
-import { YerbaService } from './servicios/yerba.service';
 
+//Importacion de los servicios para el Crud y el Storage
+import { StorageService } from './servicios/storage.service';
+import { ProductosService } from './servicios/productos.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    AdminComponent,
     ContactoComponent,
     ProductoComponent,
     FooterComponent,
-    InicioComponent,
-    AceitesComponent,
-    FrutosSecosComponent,
-    MantecasComponent,
-    HarinasComponent,
-    YerbaComponent,
-    ShampooComponent,
-    LecheComponent
+    InicioComponent
   ],
   imports: [
     BrowserModule,
@@ -69,13 +47,12 @@ import { YerbaService } from './servicios/yerba.service';
     ImageModule,
     DialogModule,
     ButtonModule,
+    CardModule,
     ReactiveFormsModule,
-    CardModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig)
-
-  
   ],
-  providers: [UsuariosService, PatovaGuard, StorageService, AceitesService, FrutosSecosService, HarinasService, LecheService, MantecasService, ShampooService, YerbaService],
+
+  providers: [UsuariosService, PatovaGuard, StorageService, ProductosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
