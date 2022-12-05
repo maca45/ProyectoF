@@ -28,6 +28,7 @@ import { PatovaGuard } from './patova.guard';
 
 
 @NgModule({
+  /* Declarar todos los componentes que se utilizan en la aplicación. */
   declarations: [
     AppComponent,
     MenuComponent,
@@ -38,7 +39,8 @@ import { PatovaGuard } from './patova.guard';
     InicioComponent,
   
   ],
-  imports: [
+  imports: /* Importar todos los módulos necesarios para que la aplicación funcione. */
+  [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

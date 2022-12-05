@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UsuariosService {
+ /* Una variable que se utiliza para comprobar si el usuario está conectado o no.*/
   private isLoged = false
 
   

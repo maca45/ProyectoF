@@ -59,8 +59,9 @@ export class MenuComponent implements OnInit {
   verificarUsuario() {
     this.coleccionUsuario.forEach(usuario => {
       if (this.Usuarios.valid) {
-        if (usuario.nombre === this.Usuarios.value.nombre!) {
-          if (usuario.contrasena === this.Usuarios.value.contrasena!) {
+        if (usuario.nombre === this.Usuarios.value.nombre!) {//si usuario nombre es igual al usuario que esta en la base de datos 
+          if (usuario.contrasena === this.Usuarios.value.contrasena!) {//si la contraseña es igual a la contrasena que esta en la base de datos 
+            /* Una función que se utiliza para mostrar un mensaje en la pantalla. */
             const Toast = Swal.mixin({
               toast: true,
               position: 'top-end',
@@ -150,6 +151,7 @@ export class MenuComponent implements OnInit {
 
 
   ngOnInit(): void {
+   /*Una array de objetos.*/
     this.items = [
       {
         label: '',
@@ -168,7 +170,7 @@ export class MenuComponent implements OnInit {
         routerLink: "/contacto"
       },
       {
-        label: "Admin",
+        label: "Administrador",
         icon: "pi pi-user-plus",
         routerLink: "/admin",
         visible: this.adminVisible,
