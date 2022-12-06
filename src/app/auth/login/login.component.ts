@@ -46,14 +46,10 @@ export class LoginComponent implements OnInit {
         
         swalWithBootstrapButtons.fire({
           title: 'Datos incorrectos',
-          text: "verifique si el email o la contraseña",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, delete it!',
-          cancelButtonText: 'No, cancel!',
-          reverseButtons: true
+          text: "Verifique si el email o la contraseña son de un usuario valido",
+          icon: 'warning'
         })
-        alert("datos incorrectos, verifique si el email o la contraseña son de un usuario valido")
+
       })
      
       
