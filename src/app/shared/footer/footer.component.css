@@ -1,0 +1,30 @@
+.text-center{
+    background-color: #76BA99; 
+   }
+   .text-lg-start {
+    text-align: left !important;
+    color: white ;
+  }
+  .text-uppercase{
+color: white;
+  }
+  .text{
+    color: white;
+    font-family:'Ubuntu', sans-serif;
+    font-weight: lighter;
+  }
+
+.pi{
+  font-size: 20px;
+}
+.text-reset{
+  font-size: 20px;
+  font-family:'Ubuntu', sans-serif;
+}
+p{
+  font-size: 20px;
+  font-family:'Ubuntu', sans-serif;
+}
+.text-uppercase{
+  font-size: 20px;
+}
