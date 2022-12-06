@@ -12,9 +12,11 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
+/* Una variable que se utiliza para almacenar los datos del formulario. */
   formularioLogin:FormGroup;
 
 
+  /* Una inyección de dependencia. */
   constructor(private fb:FormBuilder, private auth:AuthService, private  router:Router) {
 
     //inicializo mi formulario
@@ -27,6 +29,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  /**
+   * Comprueba si el formulario es válido, si lo es, obtiene el nombre de usuario y la contraseña del formulario, entonces
+   * llama al método de inicio de sesión del servicio auth, si el inicio de sesión es correcto, navega a la
+   * página del producto, si no lo es, muestra un mensaje de error.
+   */
   iniciarSesion(){
     //pregunta si el formulario es valido
     if(!this.formularioLogin.invalid){
@@ -34,7 +41,13 @@ export class LoginComponent implements OnInit {
       const{username,password}=this.formularioLogin.value;
       //inicio sesion en firebase llamando al metodo de mi servicio
       this.auth.login(username, password).then((resp)=>{
-        alert("iniciaste sesion de forma correcta");
+        Swal.fire({
+          icon: 'success',
+          title: 'Inicio Sesion Correctamente',
+          showConfirmButton: false,
+          timer: 2500
+        })
+        
       this.router.navigateByUrl('producto')
       }).catch(error=>{
         const swalWithBootstrapButtons = Swal.mixin({
@@ -47,7 +60,7 @@ export class LoginComponent implements OnInit {
         swalWithBootstrapButtons.fire({
           title: 'Datos incorrectos',
           text: "Verifique si el email o la contraseña son de un usuario valido",
-          icon: 'warning'
+          icon: 'info'
         })
 
       })
@@ -55,7 +68,12 @@ export class LoginComponent implements OnInit {
       
     }
     else{
-      alert("revise los datos, son incorrectos");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Revise los datos, son incorrectos',
+      })
+      
     }
   }
 
