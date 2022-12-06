@@ -1,6 +1,17 @@
 <p-menubar [model]="items" style="font-size: 20px;">
-    <button id="boton" type="button" routerLink="login" style="margin-top: 15px;" pButton pRipple
+    <button *ngIf="!logueado" id="boton" type="button" routerLink="login" style="margin-top: 15px;" pButton pRipple
         class="p-button-rounded p-button-success" label="Iniciar">
+    </button>
+    <button *ngIf="logueado" id="boton" type="button"  style="margin-top: 15px;" pButton pRipple
+        class="p-button-rounded p-button-success" (click)="cerrarSesion()" label="Cerrar Sesion">
     </button>
 </p-menubar>
 
+
+
+        
+     
+          
+        
+
+   

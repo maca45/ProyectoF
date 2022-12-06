@@ -33,16 +33,16 @@ export class LoginComponent implements OnInit {
       const{username,password}=this.formularioLogin.value;
       //inicio sesion en firebase llamando al metodo de mi servicio
       this.auth.login(username, password).then((resp)=>{
-        alert(resp);
+        alert("iniciaste sesion de forma correcta");
       this.router.navigateByUrl('producto')
       }).catch(error=>{
-        alert(error)
+        alert("datos incorrectos, verifique si el email o la contraseña son de un usuario valido")
       })
-      alert("inicio sesion correctamente")
+     
       
     }
     else{
-      alert("la contraseña es incorrecta")
+      alert("revise los datos, son incorrectos");
     }
   }
 

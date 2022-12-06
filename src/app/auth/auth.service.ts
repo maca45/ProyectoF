@@ -2,6 +2,7 @@ import { Injectable, resolveForwardRef } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,21 +16,14 @@ export class AuthService {
 
 //metodo para iniciar sesion y para obtener los parametro necesarios
   login(username: string, password:string){
-    return new Promise((resolve, rejects)=>{
-      try{
-       this.auth.signInWithEmailAndPassword(username, password);
-       resolve("iniciaste sesion de forma correcta")
-      } catch(error){
-          rejects(error);
-        }
-    })
-
-    
+    return this.auth.signInWithEmailAndPassword(username, password)
+  
   }
+  
 
   //este metodo va a cerrar la sesion
   logOut(){
-    this.auth.signOut();
+   return this.auth.signOut();
   }
 
 currentUser(){
