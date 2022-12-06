@@ -1,3 +1,86 @@
+
+body{
+    background-image: url("/assets/fondoinicio.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fff;
+    padding-bottom: 6%;
+    padding-top: 0%;
+}
+
+.cover-heading {
+    padding-top: 4%;
+    text-align: justify-center;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 3.4rem;
+    letter-spacing: 15px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 4px 0 #3b8135, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgb(0 0 0 / 90%);
+}
+
+
+.intro {
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    font-size: 1.25rem;
+}
+
+.informativa{
+    background-color: rgba(255, 255, 255, 0.74);
+    text-align: center;
+    color: #121212;
+    margin-top: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-weight: bold;
+    margin-left: -5%;
+}
+.container{
+    margin-right: 6%;
+    margin-left: 18%;
+}
+.row{
+    margin-left: -9%;
+}
+
+.textbanner {
+    position: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.textbanner-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+a.hover{
+    color: rgb(197, 228, 197);
+}
+.textbanner-image {
+    padding-top: 15%;
+}
+.textbanner-text {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.301);
+    position: relative;
+    padding: 3%;
+    text-align: center;
+
+}
+
+.col-3{
+    width: 29%;
+}
+
 .informacion{
     background-color: beige;
     height: 120px;
@@ -14,3 +97,4 @@ h1 {
     font-size: 50px;
     
   }
+
