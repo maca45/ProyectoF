@@ -3,16 +3,18 @@ import { getStorage, uploadString, UploadResult, ref, getDownloadURL, deleteObje
 
 @Injectable({
   providedIn: 'root'
-})
+}) 
 export class StorageService {
 
-  constructor() { }
+ constructor() { }
+
+ 
   private respuesta!: UploadResult;
   storage_productos = getStorage();
   urlImagen: string = "";
 
 
-  //Carga la imagen al Storage y a retorna 
+  //Carga la imagen al Storage y la retorna 
   async subirImagen(nombre: string, imagen: any) {
     try {
       let referenciaImagen = ref(this.storage_productos, 'productos/' + nombre)
@@ -28,13 +30,13 @@ export class StorageService {
     }
   }
 
-  /* Se obtendra la URL de la imagen */
+  // Se obtendra la URL de la imagen
   obtenerUrlImagen(respuesta:UploadResult){
     return getDownloadURL (respuesta.ref)
   }
 
 
-  /* Se eliminara la imagen */
+  // Se eliminara la imagen 
   eliminarImagen(urlImagen:string){
     let referenciaImagen = ref(this.storage_productos,urlImagen);
     deleteObject(referenciaImagen)
@@ -45,5 +47,4 @@ export class StorageService {
       alert("La imagen no pudo eliminarse. Error:"+err)
     })
   }
-
 }

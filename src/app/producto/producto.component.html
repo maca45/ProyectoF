@@ -1,5 +1,8 @@
 
-<button ngIf="logueado" pButton id="botonAgregar" class="p-button-success" label="Agregar Producto" icon="pi pi-plus-circle" (click)="mostrarDialogo()"></button>
+
+<button pButton id="botonAgregar" class="p-button-success" label="Agregar Producto" icon="pi pi-plus-circle" (click)="mostrarDialogo()"></button>-->
+<!--ngIf="logueado"-->
+
 
 <p-dialog header="¡¡¡ADVERTENCIA!!!" [(visible)]="eliminarVisible">
     <p>¿Deseas eliminar este Producto?</p> 
@@ -32,6 +35,7 @@
     <p><strong>Artículo</strong>: {{producto.nombre}}</p>
     <p><strong>Descripción</strong>: {{producto.descripcion}}</p>
     <p><strong>Precio</strong>: {{producto.precio}}</p>
-    <button ngIf="logueado" pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-pencil" (click)="mostrarEditar(producto)"></button>
-    <button ngIf="logueado" pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-trash" (click)="mostrarEliminar(producto)"></button>
+    <button pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-pencil" (click)="mostrarEditar(producto)"></button>
+    <button pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-trash" (click)="mostrarEliminar(producto)"></button>
 </p-card> 
+<!--ngIf="logueado"-->

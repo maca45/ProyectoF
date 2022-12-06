@@ -33,9 +33,10 @@ export class ProductoComponent implements OnInit {
 
   eliminarVisible: boolean = false;
 
-  public logueado: boolean = false;
+  //public logueado: boolean = false;
 
-  constructor(private servicioStorage: StorageService, private servicioProductos: ProductosService, private auth: AuthService) { }
+  constructor(private servicioStorage: StorageService, private servicioProductos: ProductosService) { }
+  //private auth: AuthService
 
   ngOnInit(): void {
 
@@ -43,19 +44,20 @@ export class ProductoComponent implements OnInit {
     this.servicioProductos.getProductos().subscribe((producto: any) => {
       this.productos = producto
     })
-
-    // Verifico el estado del usuario.
-    this.auth.user.subscribe((user) => {
-      if (user) {
-        this.logueado = true;
-      }
-      else {
-        this.logueado = false;
-      }
-    })
-
+    /*
+        // Verifico el estado del usuario.
+        this.auth.user.subscribe((user) => {
+          if (user) {
+            this.logueado = true;
+          }
+          else {
+            this.logueado = false;
+          }
+        })
+    */
   }
 
+  //Carga una imagen en el almacenamiento de Firebase y genera su URL
   async agregarProducto() {
     if (this.nuevoProducto.valid) {
       let nuevoProducto: Producto = {
@@ -97,11 +99,7 @@ export class ProductoComponent implements OnInit {
     this.modalVisible = true;
   }
 
-  /**
-   * It takes the data from the form and creates a new object with the data from the form and the id of
-   * the product to be updated. Then it calls the editProduct function from the service and if it's
-   * successful it shows an alert, if not it shows an alert with the error
-   */
+  //Toma los datos del formulario y crea un nuevo objeto
   actualizarProducto() {
     let nuevoProducto: Producto = {
       nombre: this.nuevoProducto.value.nombre!,
@@ -119,9 +117,9 @@ export class ProductoComponent implements OnInit {
       })
   }
 
-  mostrarEliminar(aceites: Producto) {
+  mostrarEliminar(productos: Producto) {
     this.eliminarVisible = true
-    this.productoSeleccionado = aceites
+    this.productoSeleccionado = productos
   }
 
   eliminarProducto() {
@@ -136,6 +134,7 @@ export class ProductoComponent implements OnInit {
     this.eliminarVisible = false
   }
 
+  //Establece el boton "Crear Producto" y vuelve verdadero la variable modalVisible
   mostrarEditar(productoSeleccionado: Producto) {
     this.productoSeleccionado = productoSeleccionado
     this.imagen = this.productoSeleccionado.img
@@ -148,6 +147,7 @@ export class ProductoComponent implements OnInit {
     this.modalVisible = true
   }
 
+  // Agrega un producto nuevo o lo actualiza 
   cargarProducto() {
     if (this.textoBoton === "Agregar Producto") {
       this.agregarProducto()
@@ -159,6 +159,7 @@ export class ProductoComponent implements OnInit {
     this.modalVisible = false
   }
 
+  // Toma el archivo y lo lee, luego establece el nombre y la URL de la imagen
   cargarImagen(event: any) {
     let archivo = event.target.files[0];
     let reader = new FileReader();

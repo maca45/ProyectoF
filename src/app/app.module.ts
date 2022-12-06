@@ -52,7 +52,7 @@ import { ProductosService } from './servicios/productos.service';
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
 
-  providers: [UsuariosService, PatovaGuard, StorageService, ProductosService],
+  providers: [PatovaGuard, StorageService, ProductosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
