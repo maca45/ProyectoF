@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 import { AuthService } from '../auth.service';
 
@@ -36,6 +37,22 @@ export class LoginComponent implements OnInit {
         alert("iniciaste sesion de forma correcta");
       this.router.navigateByUrl('producto')
       }).catch(error=>{
+        const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn-success',
+          },
+          buttonsStyling: false
+        })
+        
+        swalWithBootstrapButtons.fire({
+          title: 'Datos incorrectos',
+          text: "verifique si el email o la contraseña",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, delete it!',
+          cancelButtonText: 'No, cancel!',
+          reverseButtons: true
+        })
         alert("datos incorrectos, verifique si el email o la contraseña son de un usuario valido")
       })
      

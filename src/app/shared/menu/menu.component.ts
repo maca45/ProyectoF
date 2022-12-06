@@ -56,14 +56,22 @@ public logueado: boolean= false ;
   }
   cerrarSesion(){
     this.auth.logOut().then(()=>
-    {
-    alert("Sesion cerrada con exito")
-    Swal.fire({ //es una alerta de error de sweetalert2.
-      icon: 'error',
-      title: 'Oops...',
-      text: 'La contraseña es incorrecta',
+    { 
+
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
     })
-   
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Sesion Cerrada con Exito',
+      icon: 'success',
+      confirmButtonText: 'OK',
+     
+    }) 
     }).catch(()=>{
       alert("Problemas al Cerrar Sesion")
     }
