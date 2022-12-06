@@ -28,6 +28,7 @@ import { PatovaGuard } from './patova.guard';
 //Importacion de los servicios para el Crud y el Storage
 import { StorageService } from './servicios/storage.service';
 import { ProductosService } from './servicios/productos.service';
+import { ArticulosComponent } from './articulos/articulos.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ProductosService } from './servicios/productos.service';
     ContactoComponent,
     ProductoComponent,
     FooterComponent,
-    InicioComponent
+    InicioComponent,
+    ArticulosComponent
   ],
   imports: [
     BrowserModule,

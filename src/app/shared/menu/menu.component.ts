@@ -30,9 +30,9 @@ export class MenuComponent implements OnInit {
 
       },
       {
-        label: 'Productos',
+        label: 'Articulos',
         icon: 'pi pi-shopping-bag',
-        routerLink: 'producto'
+        routerLink: '/articulos'
       },
       {
         label: "Contactenos",
