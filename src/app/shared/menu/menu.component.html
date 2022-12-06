@@ -1,5 +1,17 @@
-
-<p-menubar [model]="items">
-    <button  id="boton" type="button"  pButton pRipple label="Iniciar Sesion" icon="pi pi-user"   ></button>
+<p-menubar [model]="items" style="font-size: 20px;">
+    <button *ngIf="!logueado" id="boton" type="button" routerLink="login" style="margin-top: 15px;" pButton pRipple
+        class="p-button-rounded p-button-success" label="Iniciar">
+    </button>
+    <button *ngIf="logueado" id="boton" type="button"  style="margin-top: 15px;" pButton pRipple
+        class="p-button-rounded p-button-success" (click)="cerrarSesion()" label="Cerrar Sesion">
+    </button>
 </p-menubar>
-<!--(click)="showModalDialog()"-->
+
+
+
+        
+     
+          
+        
+
+   

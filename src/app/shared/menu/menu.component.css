@@ -1,1 +1,119 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    color: white;
+    font-size: 25px;
+    font-family:'Ubuntu', sans-serif;
+  }
+  ::ng-deep  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon {
+    color: white;
+    margin-right: 0.5rem;
+    font-size: 20px;
+  }
+   ::ng-deep .p-menubar{
+    background-color:#76BA99;
+  }
+  ::ng-deep .p-button.p-button-success, .p-buttonset.p-button-success > .p-button, .p-splitbutton.p-button-success > .p-button {
+    margin-right: 0.5rem;
+    font-size: 25px;
+    color: white;
+    background: #41b97f;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #41b97f;
+    border-image: initial;
+    font-size: 25px;
+  }
+   ::ng-deep  .p-dialog .p-dialog-header .p-dialog-title {
+    font-weight: 600;
+    font-size: 2rem; 
+    color: #308d5f;
+    font-family: 'Lobster', cursive;
+  }
+
+  .form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+  }
+  
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px white solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color:rgb(0, 0, 0);
+   
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: #41b97f;
+    font-size: 20px;
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #41b97f;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-size: 20px;
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color:#41b97f;
+    transform: translateY(-30px);
+  }
+  button {
+    padding: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(161, 150, 150);
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px #41b97f;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  .p-button.p-button-success, .p-buttonset.p-button-success[_ngcontent-xvc-c64] > .p-button[_ngcontent-xvc-c64], .p-splitbutton.p-button-success[_ngcontent-xvc-c64] > .p-button[_ngcontent-xvc-c64] {
+    font-size: 20px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  button:hover {
+    background-color:white ;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active {
+    transform: translateY(-1px);
+  }
+  .p-button.p-button-success:enabled:hover, .p-buttonset.p-button-success > .p-button:enabled:hover, .p-splitbutton.p-button-success > .p-button:enabled:hover {
+    background:#23c483 ;
+    color: #ffffff;
+    border-color: #3D8361;
+  }
+
+  
+
