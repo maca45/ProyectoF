@@ -1,6 +1,9 @@
-
+ @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
 html {
-    background-color: #56baed;
+    background-color: #41b97f;
+  }
+  h1{
+    font-family: 'Lobster', cursive;
   }
   
   body {
@@ -9,7 +12,7 @@ html {
   }
   
   a {
-    color: #92badd;
+    color: #41b97f;
     display:inline-block;
     text-decoration: none;
     font-weight: 400;
@@ -80,7 +83,7 @@ html {
   /* FORM TYPOGRAPHY*/
   
   input[type=button], input[type=submit], input[type=reset]  {
-    background-color: #56baed;
+    background-color: #41b97f;
     border: none;
     color: white;
     padding: 15px 80px;
@@ -258,6 +261,8 @@ html {
   } 
   
   #icon {
-    width:30%;
+    width:50%;
   }
-  
+  h1{
+    color: #0d0d0d;
+  }

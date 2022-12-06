@@ -12,9 +12,13 @@ background-image: url("https://i.pinimg.com/236x/e6/20/1b/e6201bb817daef96a7112b
     flex-direction: row;
     margin-left: 6%;
     margin-right: 6%;
+}
+row{
     column-count: 2;
 }
-
+.col-2{
+    margin: 0;
+}
 .face{
     margin-left: 8%;
     margin-right: 7%;
@@ -28,7 +32,9 @@ background-image: url("https://i.pinimg.com/236x/e6/20/1b/e6201bb817daef96a7112b
 .auto-generated-link:hover {
     color: #776a54;
 }
-
+iframe{
+    margin-left: 7%;
+}
 
 
 table {

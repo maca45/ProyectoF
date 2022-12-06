@@ -1,26 +1,23 @@
-
-
-<div class="wrapper fadeInDown">
+<body style="background-image: url(https://i.pinimg.com/236x/e6/20/1b/e6201bb817daef96a7112b59f21764e7.jpg);">
+  <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="https://www.b-cube.in/wp-content/uploads/2014/05/aditya-300x177.jpg" id="icon" alt="User Icon" />
-      <h1>Aditya News</h1>
+      <img src="../../../assets/CAMI.png" id="icon" alt="User Icon" />
+      <h1>Iniciar Sesion</h1>
     </div>
 
     <!-- Login Form -->
     <form [formGroup]="formularioLogin">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="username" formControlName='username'>
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" formControlName='password'>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="@email" formControlName='username'>
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="Contraseña" formControlName='password'>
       <input type="submit" class="fadeIn fourth" value="Log In" (click)="iniciarSesion()">
     </form>
 
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Go to the Site</a>
-    </div>
 
   </div>
 </div>
+</body>
+
