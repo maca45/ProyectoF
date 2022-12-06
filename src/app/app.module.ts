@@ -26,6 +26,7 @@ import {ButtonModule} from 'primeng/button';
 
 import {MenubarModule} from 'primeng/menubar';
 import {ImageModule} from 'primeng/image';
+import {InputTextModule} from 'primeng/inputtext';
 
 import { environment } from 'src/environments/environment';
 
@@ -57,6 +58,7 @@ import { LoginComponent } from './auth/login/login.component';
     ImageModule,
     DialogModule,
     ButtonModule,
+    InputTextModule,
     ReactiveFormsModule,
     ImageModule,
     CardModule,

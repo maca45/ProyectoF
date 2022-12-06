@@ -14,9 +14,11 @@
         <button pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-times"
             (click)="eliminarVisible=false"></button>
     </p-dialog>
+    
 
     <!--Formulario para agregar producto-->
     <p-dialog header="{{textoBoton}}" [(visible)]="modalVisible">
+        
         <form [formGroup]="nuevoProducto">
             <img [src]="imagen" alt="aun no hay imagen" id="previsualizacion">
             <span class="p-float-label">
@@ -37,15 +39,16 @@
                 (click)="cargarProducto()"></button>
         </form>
     </p-dialog>
-
-    <p-card *ngFor="let producto of productos " title="Productos" styleClass="p-card-shadow" class="p-card">
-        <img src="{{producto.img}}">
-        <p><strong>Artículo</strong>: {{producto.nombre}}</p>
-        <p><strong>Descripción</strong>: {{producto.descripcion}}</p>
-        <p><strong>Precio</strong>: {{producto.precio}}</p>
-        <button *ngIf="logueado" pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-pencil"
-            (click)="mostrarEditar(producto)"></button>
-        <button *ngIf="logueado" pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-trash"
-            (click)="mostrarEliminar(producto)"></button>
-    </p-card>
+    
+                <p-card *ngFor="let producto of productos " title="Productos" styleClass="p-card-shadow" class="p-card">
+                    <img src="{{producto.img}}"  width="400" height="400">
+                    <p><strong>Artículo</strong>: {{producto.nombre}}</p>
+                    <p><strong>Descripción</strong>: {{producto.descripcion}}</p>
+                    <p><strong>Precio</strong>: {{producto.precio}}</p>
+                    <button *ngIf="logueado" pButton class="p-button-success p-button-rounded p-button-raised" icon="pi pi-pencil"
+                        (click)="mostrarEditar(producto)"></button>
+                    <button *ngIf="logueado" pButton class="p-button-danger p-button-rounded p-button-raised" icon="pi pi-trash"
+                        (click)="mostrarEliminar(producto)"></button>
+                </p-card>
+   
 </body>
