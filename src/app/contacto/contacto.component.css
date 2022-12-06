@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
 .contenedor {
     flex:auto;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,13 +9,18 @@
     /*
 background-image: url("https://i.pinimg.com/236x/e6/20/1b/e6201bb817daef96a7112b59f21764e7.jpg") !important;
 */
+.pi {
+    font-size: 0.9cm;
+  }
 .container-contacto {
     flex-direction: row;
     margin-left: 6%;
     margin-right: 6%;
+    vertical-align: middle;
 }
 row{
     column-count: 2;
+    
 }
 .col-2{
     margin: 0;
@@ -81,8 +87,13 @@ tr:hover td {
     margin-left: 10%;
     color: #ffffff;
 }
+h2{
+    font-family: 'Lobster', cursive;
+    font-size:1.5cm;
+}
 
 .hs {
     color: rgb(241, 231, 231);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Lobster', cursive;
+    font-size:1.5cm;
 }
