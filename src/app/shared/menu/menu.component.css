@@ -5,6 +5,7 @@
     color: white;
     font-size: 25px;
     font-family:'Ubuntu', sans-serif;
+    
   }
   ::ng-deep  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon {
     color: white;
@@ -13,6 +14,13 @@
   }
    ::ng-deep .p-menubar{
     background-color:#76BA99;
+    padding: 1rem;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px;
   }
   ::ng-deep .p-button.p-button-success, .p-buttonset.p-button-success > .p-button, .p-splitbutton.p-button-success > .p-button {
     margin-right: 0.5rem;
@@ -38,6 +46,9 @@
     width: 190px;
   }
   
+
+
+
   .form-control input {
     background-color: transparent;
     border: 0;
