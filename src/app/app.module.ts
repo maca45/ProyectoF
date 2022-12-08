@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 
 import { MenuComponent } from './shared/menu/menu.component';
 
+import {CardModule} from 'primeng/card';
+
 import { ContactoComponent } from './contacto/contacto.component';
 import { ProductoComponent } from './producto/producto.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -57,6 +59,7 @@ import { LoginComponent } from './auth/login/login.component';
     ButtonModule,
     ReactiveFormsModule,
     ImageModule,
+    CardModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
 
