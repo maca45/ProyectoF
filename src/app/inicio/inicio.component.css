@@ -32,7 +32,7 @@ body{
 }
 
 .informativa{
-    background-color: rgba(255, 255, 255, 0.74);
+    background-color: #d8d2bfbe;
     text-align: center;
     color: #121212;
     margin-top: 10%;
@@ -80,7 +80,6 @@ a.hover{
 .col-3{
     width: 29%;
 }
-
 .informacion{
     background-color: beige;
     height: 120px;
